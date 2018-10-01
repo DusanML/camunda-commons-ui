@@ -153,7 +153,13 @@ module.exports = function(grunt) {
           src: ['lib/widgets/**/test/*.src.js'], // Actual pattern(s) to match.
           ext: '.build.js',   // Dest filepaths will have this extension.
           extDot: 'first'   // Extensions in filenames begin after the first dot
-        }]
+        },
+        {
+            expand: true,     // Enable dynamic expansion.
+            src: ['lib/widgets/**/ds/*.src.js'], // Actual pattern(s) to match.
+            ext: '.build.js',   // Dest filepaths will have this extension.
+            extDot: 'first'   // Extensions in filenames begin after the first dot
+          }]
       },
 
       watch: {
@@ -162,7 +168,13 @@ module.exports = function(grunt) {
           src: ['lib/widgets/**/test/*.src.js'], // Actual pattern(s) to match.
           ext: '.build.js',   // Dest filepaths will have this extension.
           extDot: 'first'   // Extensions in filenames begin after the first dot
-        }],
+        },
+        {
+            expand: true,     // Enable dynamic expansion.
+            src: ['lib/widgets/**/ds/*.src.js'], // Actual pattern(s) to match.
+            ext: '.build.js',   // Dest filepaths will have this extension.
+            extDot: 'first'   // Extensions in filenames begin after the first dot
+          }],
         options: {
           watch: true
         }
